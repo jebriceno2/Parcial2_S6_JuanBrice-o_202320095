@@ -1,7 +1,7 @@
  <div class="container-fluid">
   <div class="row">
     <div *ngFor="let aerolinea of aerolineas" class="col mb-2">
-      <div class="grid text-center" (click)="onSelect(aerolinea)" style="width: 15rem; height: 15rem">
+      <div class="col" (click)="onSelect(aerolinea)" style="width: 15rem; height: 15rem">
         <div class="card-body">
           <h5 class="card-title">{{ aerolinea.airlineName }}</h5>
         </div>
