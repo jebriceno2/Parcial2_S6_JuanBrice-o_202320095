@@ -12,7 +12,7 @@ export class AerolineasService {
 
   constructor(private http: HttpClient) {}
 
-  getSeries(): Observable<Aerolineas[]> {
+  getAerolineas(): Observable<Aerolineas[]> {
     return this.http.get<Aerolineas[]>(this.apiUrl);
   }
 }

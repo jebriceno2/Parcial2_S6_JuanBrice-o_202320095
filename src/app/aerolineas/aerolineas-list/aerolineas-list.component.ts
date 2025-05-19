@@ -12,13 +12,13 @@ export class AerolineasListComponent implements OnInit {
 
   constructor(private AerolineasService: AerolineasService) {}
   
-  selectedSerie: Aerolineas | null = null;
+  selectedAerolinea: Aerolineas | null = null;
 
-  onSelect(serie: Aerolineas): void {
-    this.selectedSerie = serie;
+  onSelect(aerolinea: Aerolineas): void {
+    this.selectedAerolinea = aerolinea;
   }
   ngOnInit(): void {
-    this.AerolineasService.getSeries().subscribe(data => {
+    this.AerolineasService.getAerolineas().subscribe(data => {
       this.aerolineas = data;
     });
   }

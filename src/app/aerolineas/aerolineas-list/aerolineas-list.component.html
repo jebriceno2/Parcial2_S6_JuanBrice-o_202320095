@@ -1,9 +1,24 @@
  <div class="container-fluid">
   <div class="row">
     <div *ngFor="let aerolinea of aerolineas" class="col mb-2">
-      <div class="grid text-center" style="width: 15rem; height: 15rem">
+      <div class="grid text-center" (click)="onSelect(aerolinea)" style="width: 15rem; height: 15rem">
         <div class="card-body">
           <h5 class="card-title">{{ aerolinea.airlineName }}</h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detalle -->
+    <div class="col-md-4" *ngIf="selectedAerolinea">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ selectedAerolinea.airlineName }}</h5>
+          <p class="card.text">{{ selectedAerolinea.id }}</p>
+          <p class="card.text">{{ selectedAerolinea.country }}</p>
+          <p class="card.text">{{ selectedAerolinea.city }}</p>
+          <p class="card.text">{{ selectedAerolinea.address }}</p>
+          <p class="card.text">{{ selectedAerolinea.identityColor }}</p>
+          <p class="card.text">{{ selectedAerolinea.slogan }}</p>
         </div>
       </div>
     </div>
